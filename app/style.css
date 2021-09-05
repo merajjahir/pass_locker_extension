@@ -15,16 +15,19 @@
 	width: 100%;
 	padding: 15px;
 	border: 1px solid #dddddd;
+	font-size: 1.5em;
 	margin-bottom: 15px;
 	box-sizing:border-box;
 }
 .login-form input[type="submit"] {
 	width: 100%;
 	padding: 15px;
-	background-color: #535b63;
+	background-color: #1ea01e;
 	border: 0;
 	box-sizing: border-box;
 	cursor: pointer;
 	font-weight: bold;
 	color: #ffffff;
 }
+
+/* background-color: #535b63; */

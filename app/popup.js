@@ -1,27 +1,27 @@
 
 console.log('popup script running');
 
-// let mysql = require('mysql');
-// let express = require('express');
-// let session = require('express-session');
-// let bodyParser = require('body-parser');
-// let path = require('path');
-
-
-
-
-
-
-
 
 //the background data handleing
 
-let autofill =document.getElementById('autofill');
+let login_submit =document.getElementById('autofill');
+let user_email = document.getElementById('name');
+let user_password = document.getElementById('pass');
 
 
-    autofill.addEventListener('click',()=>
-    {
-        chrome.runtime.sendMessage({data:'popup'},
-        (response) => {console.log(response.confirmation);})
-    })
+
+// console.log(autofill);
+     autofill.addEventListener('click',()=>
+     {
+        let all_datas = {
+	        data:'popup',
+            email:user_email.value,
+            password:user_password.value
+        }
+
+         chrome.runtime.sendMessage({all_datas},
+         (response) => {console.log(response.confirmation)})
+     })
+
+
 
